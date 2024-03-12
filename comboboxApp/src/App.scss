@@ -1,0 +1,168 @@
+body, #root {
+  width: 100%;
+  background-color: #393939;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, button, input {
+  font-family: "Poppins", sans-serif;
+}
+
+.CustomForm {
+  width: 30%;
+  padding: 40px;
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  gap: 10px;
+
+  .submitButtonm {
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: rgb(20, 204, 217);
+    color: white;
+    font-weight: bold;
+
+    &:hover {
+      background-color: rgb(96, 96, 96);
+      color: white;
+    }
+  }
+}
+
+.customInput {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+
+  &.error {
+    background-color: red;
+    color: white;
+  }
+}
+
+.comboBox {
+  .universitiesView {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    margin: 4px 0px;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 10px; 
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(20, 204, 217);
+      border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 6px;
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+
+    .universityItemMain {
+      position: relative;
+
+      &:hover {
+        .goToPageWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .goToPageWrapper {
+        position: absolute;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        display: none;
+
+        .goToPage {
+          margin-right: 5px;
+          padding: 0px 10px;
+          z-index: 1000;
+          background-color: rgb(20, 204, 217);
+          border-radius: 5px;
+          text-decoration: none;
+          color: white;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: rgb(96, 96, 96);
+            color: white;
+          }
+        }
+      }
+
+      .universityItem {
+        width: 100%;
+        cursor: pointer;
+        padding: 4px 0px;
+        margin: 4px 0px;
+        background-color: white;
+        border-radius: 8px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: black;
+        transition: 0.3s;
+        
+        span {
+          max-width: 100px;
+          padding-left: 10px;
+        }
+  
+        &:hover {
+          background-color: rgb(64, 64, 64);
+          color: white;
+        }
+      }
+    }
+  }
+}
+.MainCustomInput {
+  .titleLabelForInput {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .inputWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    .deleteIcon {
+      position: absolute;
+      height: 100%;
+      right: 0;
+      color: black;
+      font-size: 26px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
